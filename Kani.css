@@ -6,21 +6,21 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: blue;
+    background-color: #1e3a8a; /* A deeper blue for better contrast */
     margin: 20px;
 }
 
 .portfolio-container {
     max-width: 1200px;
     margin: auto;
-    background: blueviolet;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #6a0dad; /* Darker violet */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     overflow: hidden;
 }
 
 .hero {
-    background: linear-gradient(135deg,blue, green);
+    background: linear-gradient(135deg, #1e3a8a, #28a745); /* More refined blue-green */
     color: #fff;
     text-align: center;
     padding: 40px 20px;
@@ -32,6 +32,11 @@ body {
     height: 120px;
     object-fit: cover;
     border: 4px solid #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero img:hover {
+    transform: scale(1.1);
 }
 
 .hero h1 {
@@ -42,27 +47,30 @@ body {
 .hero p {
     font-size: 1rem;
     margin: 0;
+    opacity: 0.9; /* Slight transparency for better readability */
 }
 
 .content {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
+    justify-content: space-around; /* Ensures even spacing */
 }
 
 .section {
     flex: 1 1 45%;
+    min-width: 300px; /* Prevents sections from becoming too small */
     margin: 10px;
     padding: 20px;
     background: #fafafa;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .section h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #333;
+    color: #222; /* Slightly darker for contrast */
 }
 
 .section ul {
@@ -73,7 +81,7 @@ body {
 .section ul li {
     font-size: 1rem;
     margin: 5px 0;
-    color: #555;
+    color: #444;
 }
 
 .timeline {
@@ -87,10 +95,21 @@ body {
 
 .timeline .event h3 {
     font-size: 1.2rem;
-    color: #444;
+    color: #333;
 }
 
 .timeline .event p {
     font-size: 0.9rem;
-    color: #666;
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    .section {
+        flex: 1 1 100%;
+    }
 }
